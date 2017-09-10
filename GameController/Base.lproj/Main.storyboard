@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yp1-Hc-GhY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yp1-Hc-GhY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" id="adT-GA-8zk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hqs-D0-wRn">
                             <connections>
-                                <segue destination="D28-di-IIh" kind="show" id="QNJ-d8-Isa"/>
+                                <segue destination="D28-di-IIh" kind="show" identifier="gameSegue" id="QNJ-d8-Isa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -91,6 +91,14 @@
                                     <action selector="addTapped:" destination="D28-di-IIh" eventType="touchUpInside" id="FBx-7M-bkL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCk-g0-2Id">
+                                <rect key="frame" x="165" y="381" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="D28-di-IIh" eventType="touchUpInside" id="EgN-lr-UIh"/>
+                                    <action selector="deleteTapped:" destination="D28-di-IIh" eventType="touchUpInside" id="66L-AQ-uqF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -99,8 +107,10 @@
                             <constraint firstItem="Moe-D9-SIR" firstAttribute="centerX" secondItem="QH0-lu-ETq" secondAttribute="centerX" id="GFS-YJ-qWB"/>
                             <constraint firstItem="ThJ-j1-20c" firstAttribute="centerX" secondItem="QH0-lu-ETq" secondAttribute="centerX" id="R3p-gK-HMm"/>
                             <constraint firstItem="aqq-KY-I1E" firstAttribute="centerX" secondItem="QH0-lu-ETq" secondAttribute="centerX" id="Xa0-Nl-xBG"/>
+                            <constraint firstItem="yCk-g0-2Id" firstAttribute="centerX" secondItem="QH0-lu-ETq" secondAttribute="centerX" id="l3E-oi-MWV"/>
                             <constraint firstItem="aqq-KY-I1E" firstAttribute="top" secondItem="Moe-D9-SIR" secondAttribute="bottom" constant="31" id="lkf-fr-EO0"/>
                             <constraint firstItem="ThJ-j1-20c" firstAttribute="top" secondItem="aqq-KY-I1E" secondAttribute="bottom" constant="33" id="mNm-lf-QWe"/>
+                            <constraint firstItem="yCk-g0-2Id" firstAttribute="top" secondItem="ThJ-j1-20c" secondAttribute="bottom" constant="8" id="rHW-Db-piB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JQh-QI-zhd">
@@ -118,13 +128,15 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addupdatebutton" destination="ThJ-j1-20c" id="CbC-Mw-4Pv"/>
+                        <outlet property="deletebutton" destination="yCk-g0-2Id" id="TG3-29-Yxn"/>
                         <outlet property="gameImageView" destination="Moe-D9-SIR" id="Y3k-ua-oMg"/>
                         <outlet property="titleTextView" destination="aqq-KY-I1E" id="nee-Wc-stF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEY-Hg-rSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="139"/>
+            <point key="canvasLocation" x="1877.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aaq-F3-2Ta">
